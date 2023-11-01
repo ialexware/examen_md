@@ -34,7 +34,7 @@ jobs:
       run: appcmd stop sites "api-ialexware"
       
     - name: Publish Release
-      run: dotnet publish --configuration Release -o C:\inetpub\Sites\api-ialexware
+      run: dotnet publish --configuration Release -o ${{ secrets.WORK_DIR }}
       
     - name: Start api-ialexware
       run: appcmd start sites "api-ialexware"
