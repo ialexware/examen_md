@@ -30,13 +30,13 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
 
-    - name: Stop example.com
+    - name: Stop api-ialexware
       run: appcmd stop sites "api-ialexware"
       
     - name: Publish Release
-      run: dotnet publish api-ialexware --configuration Release -o C:\inetpub\Sites\api-ialexware
+      run: dotnet publish --configuration Release -o C:\inetpub\Sites\api-ialexware
       
-    - name: Start example.com
+    - name: Start api-ialexware
       run: appcmd start sites "api-ialexware"
         
       
